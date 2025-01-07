@@ -7,20 +7,20 @@ Setup:
 5) login to cluster
 
 Run Steps:
-1) run follow script to create input and output folders
+1) run follow script to create input and output folders</br>
 	hadoop fs -rm -f -r /input
 	hadoop fs -rm -f -r /output
 	hadoop fs -mkdir /input
 	hadoop fs -mkdir /output
 	
-2) run follow script to execute
+2) run follow script to execute</br>
 	spark-submit --class streaming.WordCount --master yarn --deploy-mode client count.jar hdfs:///input hdfs:///output
 
-3) run follow script copy testing text files for counting to the input folder
+3) run follow script copy testing text files for counting to the input folder</br>
 	hadoop fs -copyFromLocal test1.txt /input/test1.txt
 	...
 	
-4) run follow script to check the execution output
+4) run follow script to check the execution output</br>
 	hadoop fs -ls /output /
-  hadoop fs -cat /output/taskA-001/part*
+  	hadoop fs -cat /output/taskA-001/part*
 
