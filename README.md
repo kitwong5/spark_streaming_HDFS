@@ -1,3 +1,4 @@
+Setup:
 1) use WinSCP to transfer follow files from your PC to jumphost /home/ec2-user/data/ 
 	count.jar
 2) use Putty to login the jumphost sever
