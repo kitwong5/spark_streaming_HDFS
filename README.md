@@ -17,7 +17,7 @@ Run Steps:
 	spark-submit --class streaming.WordCount --master yarn --deploy-mode client count.jar hdfs:///input hdfs:///output
 
 3) run follow script copy testing text files for counting to the input folder</br>
-	hadoop fs -copyFromLocal test1.txt /input/test1.txt
+	hadoop fs -copyFromLocal test1.txt /input/test1.txt</br>
 	...
 	
 4) run follow script to check the execution output</br>
