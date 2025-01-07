@@ -1,5 +1,5 @@
 Setup:
-1) use WinSCP to transfer follow files from your PC to jumphost /home/ec2-user/data/ 
+1) use WinSCP to transfer follow files from your PC to jumphost /home/ec2-user/data/ </br>
 	count.jar
 2) use Putty to login the jumphost sever
 3) create cluster
@@ -8,10 +8,10 @@ Setup:
 
 Run Steps:
 1) run follow script to create input and output folders</br>
-	hadoop fs -rm -f -r /input
-	hadoop fs -rm -f -r /output
-	hadoop fs -mkdir /input
-	hadoop fs -mkdir /output
+	hadoop fs -rm -f -r /input</br>
+	hadoop fs -rm -f -r /output</br>
+	hadoop fs -mkdir /input</br>
+	hadoop fs -mkdir /output</br>
 	
 2) run follow script to execute</br>
 	spark-submit --class streaming.WordCount --master yarn --deploy-mode client count.jar hdfs:///input hdfs:///output
